@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Scam Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="logo">TT</div>
+
+        <h1>TikTok Scam Report</h1>
+        <p class="subtitle">
+            Công cụ chuẩn bị báo cáo tài khoản có dấu hiệu lừa đảo
+        </p>
+
+        <label for="username">Username TikTok</label>
+        <div class="input-box">
+            <span>@</span>
+            <input
+                id="username"
+                type="text"
+                placeholder="username"
+                autocomplete="off"
+            >
+        </div>
+
+        <label for="reason">Lý do báo cáo</label>
+        <select id="reason">
+            <option value="Lừa đảo hoặc gian lận">
+                Lừa đảo hoặc gian lận
+            </option>
+            <option value="Giả mạo">
+                Giả mạo
+            </option>
+            <option value="Dẫn dụ người dùng vào liên kết đáng ngờ">
+                Liên kết đáng ngờ
+            </option>
+            <option value="Yêu cầu chuyển tiền có dấu hiệu lừa đảo">
+                Yêu cầu chuyển tiền
+            </option>
+            <option value="Khác">
+                Khác
+            </option>
+        </select>
+
+        <button id="generateBtn">
+            Tạo báo cáo
+        </button>
+
+        <div id="result" class="result hidden">
+            <h2>Thông tin</h2>
+
+            <div class="profile">
+                <span>👤</span>
+                <div>
+                    <strong id="displayUsername"></strong>
+                    <a id="profileLink" href="#" target="_blank">
+                        Mở trang TikTok
+                    </a>
+                </div>
+            </div>
+
+            <label>Nội dung báo cáo</label>
+
+            <textarea
+                id="reportText"
+                readonly
+            ></textarea>
+
+            <button id="copyBtn" class="secondary">
+                📋 Sao chép nội dung
+            </button>
+
+            <a
+                id="openTikTok"
+                class="report-link"
+                href="https://www.tiktok.com/"
+                target="_blank"
+            >
+                Mở TikTok để báo cáo
+            </a>
+        </div>
+
+        <p id="message" class="message"></p>
+
+        <div class="warning">
+            ⚠️ Chỉ báo cáo khi tài khoản thực sự có dấu hiệu vi phạm.
+            Không gửi báo cáo hàng loạt hoặc báo cáo sai sự thật.
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
